@@ -1,20 +1,20 @@
-express = require("express");
-mongoose = require("mongoose");
-cors = require("cors");
-path = require("path");
-app = express();
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const path = require("path");
+const dotenv = require("dotenv");
+const app = express();
+
+dotenv.config();
 
 app.use(express.json());
 app.use(cors());
 
 mongoose
-  .connect(
-    "mongodb+srv://saravanakumar:saravana123@cluster0.rsqg0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
-  )
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then((res) => {
     console.log("Connected succesfully");
   })
