@@ -19,7 +19,7 @@ function Register() {
     e.preventDefault();
     axios
       // .post("https://67524035d1983b9597b5b438.mockapi.io/project", data)
-      .post("http://localhost:3000/user", data)
+      .post("https://reactproject-server.onrender.com/user", data)
 
       .then((res) => alert("submitted successfully"));
     setData({

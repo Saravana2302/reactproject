@@ -8,7 +8,7 @@ function Table() {
   useEffect(() => {
     axios
       // .get("https://67524035d1983b9597b5b438.mockapi.io/project")
-      .get("http://localhost:3000/user")
+      .get("https://reactproject-server.onrender.com/user")
       .then((res) => {
         setData(res.data);
       })

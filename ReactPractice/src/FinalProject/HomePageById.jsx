@@ -9,7 +9,7 @@ function HomePageById() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/user/${id}`)
+      .get(`https://reactproject-server.onrender.com/user/${id}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, [id]);

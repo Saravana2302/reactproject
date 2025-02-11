@@ -8,7 +8,7 @@ function Delete() {
   const navigate = useNavigate();
   useEffect(() => {
     axios
-      .delete(`http://localhost:3000/user/${id}`)
+      .delete(`https://reactproject-server.onrender.com/user/${id}`)
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, [id]);
